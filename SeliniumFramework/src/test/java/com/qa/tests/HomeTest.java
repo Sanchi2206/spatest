@@ -33,7 +33,6 @@ public class HomeTest extends TestBase{
 		
 	}
 	
-	@Test (priority = 2)
 	
 	public void VerifyusernameTest() {
 		util.switchtomethod();
@@ -55,6 +54,17 @@ public class HomeTest extends TestBase{
 		 }
 
 	
+public void VerifyusernameTest() {
+		util.switchtomethod();
+	boolean username=	home.verifycorrectUsername();
+	Assert.assertTrue(username);
+	}
+	
+	@Test (priority = 3)
 
+	public void ClickonContactsPage() {
+		util.switchtomethod();
+		home.ClickonContact();
+	}
 	
 }
